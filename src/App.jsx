@@ -23,7 +23,7 @@ function App() {
   })
 
   const description = contacts.find(detail => detail.id === hash)
-  // console.log(description.company.name)
+
 
 
 
@@ -47,13 +47,13 @@ function App() {
         }
       </ul>
       {
-        contacts ? (<h2>{description.email}</h2>): null
+        description !== undefined ? (<h2>{description.email}</h2>): null
       }
       {
-        contacts ? (<h2>{description.company.name}</h2>): null
+        description !== undefined ? (<h2>{description.company.name}</h2>): null
       }
       {
-        contacts ? (<h2>{description.phone}</h2>): null
+        description !== undefined ? (<h2>{description.phone}</h2>): null
       }
       
     </div>
